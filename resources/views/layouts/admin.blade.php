@@ -13,9 +13,10 @@
     <link href="/css/font-awesome.css" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
     <link href="/css/dash.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/1-col-portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css">
 
-
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" >
     <!-- Toastr style
     <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
   -->
@@ -52,12 +53,14 @@
                         </div>
                     </li>
 
-                    <li class="active">
+                    <li class="">
                         <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Properties</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                           <!--  <li class="active"><a href="index.html">Properties</a></li>-->
-                            <li><a href="">Add Property</a></li>
-                            <li><a href="">Manage Property</a></li>
+                            <li><a href="{{route('properties.create')}}">Add Property</a></li>
+                            <li><a href="/properties">Manage Property</a></li>
+                            <li><a href="{{route('image.create')}}">Add Property Slideshow images</a></li>
+
 
                         </ul>
                     </li>
@@ -75,7 +78,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/property_purpose"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Property Purpose</span><span class="fa arrow"></span></a>
+                        <a href="/property_purpose"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Property Purpose</span></span></a>
                         <!--<ul class="nav nav-second-level collapse">
                             <li><a href="graph_flot.html">Flot Charts</a></li>
                             <li><a href="graph_morris.html">Morris.js Charts</a></li>
@@ -92,6 +95,37 @@
 
                         </ul>
                     </li>
+                    <li>
+                        <a href="/featured"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Featured properties</span></a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="/issued"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Issued properties</span></a>
+                    </li>
+                  -->
+                    <li>
+                        <a href="/property_inquiries"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Property Inquiries</span></a>
+
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Services</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="{{route('add_services.create')}}">Add new Service</a></li>
+                            <li><a href="/add_services">Manage Services</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Downloads</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="{{route('category.create')}}">Add new Download Category</a></li>
+                              <li><a href="/category">Manage Download Categories</a></li>
+                              <li><a href="{{route('downloads.create')}}">Add new Download</a></li>
+                            <li><a href="/downloads">Manage Download</a></li>
+
+                        </ul>
+                    </li>
+
 
                     <!--
                     <li>
@@ -390,7 +424,7 @@
 
               -->
                 <li>
-                    <a href="login.html">
+                    <a href="/logout">
                         <i class="fa fa-sign-out"></i> Log out
                     </a>
                 </li>

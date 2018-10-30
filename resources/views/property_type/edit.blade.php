@@ -1,4 +1,4 @@
-
+@if(isset(Auth::user()->email))
 @extends('layouts.admin')
 @section('title')
   <h5>Edit property type</h5>
@@ -18,3 +18,6 @@
   </fieldset>
 </form>
 @stop
+@else
+   <script>window.location = "/login";</script>
+  @endif

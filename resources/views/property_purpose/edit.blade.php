@@ -1,4 +1,4 @@
-
+@if(isset(Auth::user()->email))
 @extends('layouts.admin')
 @section('title')
   <h5>Edit property purpose</h5>
@@ -17,4 +17,7 @@
     <button type="submit" class="btn btn-primary">Save</button>
   </fieldset>
 </form>
+@else
+   <script>window.location = "/login";</script>
+  @endif
 @stop

@@ -42,17 +42,17 @@ $(function () {
                     $('.sticky-header').addClass('header-shrink');
                 }
                 if($('.do-sticky').length < 1) {
-                    $('.logo img').attr('src', 'assets/img/logos/black-logo.png');
+                    $('.logo img').attr('src', '/img/banner-4.jpg');
                 }
             }
             else {
                 $('.sticky-header').removeClass('header-shrink');
                 if($('.do-sticky').length < 1) {
-                    $('.logo img').attr('src', 'assets/img/logos/logo.png');
+                    $('.logo img').attr('src', '/img/banner-4.jpg');
                 }
             }
         } else {
-            $('.logo img').attr('src', 'assets/img/logos/black-logo.png');
+            $('.logo img').attr('src', '/img/banner-4.jpg');
         }
     }
 
@@ -172,6 +172,7 @@ $(function () {
     });
 
     // Full  Page Search Activation
+
     $(function () {
         $('a[href="#full-page-search"]').on('click', function(event) {
             event.preventDefault();
@@ -185,10 +186,12 @@ $(function () {
             }
         });
 
+/*
         $('form').submit(function(event) {
             event.preventDefault();
-            return false;
-        })
+            return true;
+        });
+        */
     });
 
 
@@ -659,9 +662,7 @@ $(function () {
             '    <div class="color-plate purple-plate" data-color="purple"></div>\n' +
             '    <div class="color-plate blue-light-plate" data-color="blue-light"></div>\n' +
             '    <div class="color-plate brown-plate" data-color="brown"></div>\n' +
-            '    <div class="setting-button">\n' +
-            '        <i class="fa fa-gear"></i>\n' +
-            '    </div>\n' +
+
             '</div>';
         $('body').append(plateStings);
     }
@@ -676,6 +677,7 @@ $(function () {
 });
 
 // mCustomScrollbar initialization
+/*
 (function ($) {
     $(window).on('resize', function () {
         $('#map').css('height', $(this).height() - 110);
@@ -689,4 +691,4 @@ $(function () {
             $('.map-content-sidebar').css('height', '100%');
         }
     }).trigger("resize");
-})(jQuery);
+})*/(jQuery);

@@ -11,7 +11,7 @@ class PropertyPurpose extends Model
     ];
 
     public function properties(){
-      return $this->belongsTo(Property::class);
+      return $this->hasMany(Property::class);
     }
 
 }

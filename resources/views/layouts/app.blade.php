@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from storage.googleapis.com/themevessel-xero/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Oct 2018 13:11:31 GMT -->
+
 <head>
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PDTWJ3Z');</script>
-    <!-- End Google Tag Manager -->
+     End Google Tag Manager -->
     <title>Realmast</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -26,22 +26,21 @@
     <link type="text/css" rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
 
-    <!-- Favicon icon
+    <!-- Favicon icon-->
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" >
--->
-    <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="../../fonts.googleapis.com/css65e6.css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
 
+    <!-- Google fonts
+    <link rel="stylesheet" type="text/css" href="../../fonts.googleapis.com/css65e6.css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+-->
     <!-- Custom Stylesheet -->
     <link type="text/css" rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="/css/skins/default.css">
 
 </head>
 <body id="top">
-<!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript)
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDTWJ3Z"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+ End Google Tag Manager (noscript) -->
 <div class="page_loader"></div>
 
 <!-- main header start -->
@@ -50,9 +49,9 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light rounded">
-                    <a class="navbar-brand logo navbar-brand d-flex w-50 mr-auto" href="index.html">
-                        <!--<img src="/img/logos/black-logo.png" alt="logo">-->
-                        <h3>Realmast</h3>
+                    <a class="navbar-brand logo navbar-brand d-flex w-50 mr-auto" href="/">
+                        <img src="/img/banner-4.jpg" alt="logo">
+                      <h3>Realmast</h3>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="fa fa-bars"></span>
@@ -60,28 +59,29 @@
                     <div class="navbar-collapse collapse w-100" id="navbar">
                         <ul class="navbar-nav w-100 justify-content-center">
                             <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="/"  aria-haspopup="true" aria-expanded="false">
                                     Home
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item" href="index.html">Index 1</a></li>
-                                  <!--  <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
+                                   <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
                                     <li><a class="dropdown-item" href="index-3.html">Index 3 (Map)</a></li>
                                     <li><a class="dropdown-item" href="index-4.html">Index 4</a></li>
                                     <li><a class="dropdown-item" href="index-5.html">Index 5</a></li>
                                     <li><a class="dropdown-item" href="index-6.html">Index 6</a></li>
                                     <li><a class="dropdown-item" href="index-7.html">Index 7</a></li>
                                     <li><a class="dropdown-item" href="index-8.html">Index 8 (Video)</a></li>
-                                  -->
+
                                 </ul>
+                            -->
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Properties
+                                    Property listings
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="">For rent</a></li>
-                                    <li><a class="dropdown-item" href="">For sale</a></li>
+                                  @yield('list')
+
                                   <!--  <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
                                     <li><a class="dropdown-item" href="index-3.html">Index 3 (Map)</a></li>
                                     <li><a class="dropdown-item" href="index-4.html">Index 4</a></li>
@@ -91,6 +91,11 @@
                                     <li><a class="dropdown-item" href="index-8.html">Index 8 (Video)</a></li>
                                   -->
                                 </ul>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="/about"  aria-haspopup="true" aria-expanded="false">
+                                        About us
+                                    </a>
+                                  </li>
                             <!--
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,7 +112,7 @@
 
 
                                 </ul>
-                                <!--
+
                             </li>
                             <li class="nav-item dropdown megamenu-li">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
@@ -233,9 +238,41 @@
                                     Our Services
                                 </a>
 
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  @yield('links')
+                                  <!--  <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
+                                    <li><a class="dropdown-item" href="index-3.html">Index 3 (Map)</a></li>
+                                    <li><a class="dropdown-item" href="index-4.html">Index 4</a></li>
+                                    <li><a class="dropdown-item" href="index-5.html">Index 5</a></li>
+                                    <li><a class="dropdown-item" href="index-6.html">Index 6</a></li>
+                                    <li><a class="dropdown-item" href="index-7.html">Index 7</a></li>
+                                    <li><a class="dropdown-item" href="index-8.html">Index 8 (Video)</a></li>
+                                  -->
+                                </ul>
+
                             </li>
-                            <li class="nav-item dropdown">
+
+                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Opportunities
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="">Careers</a></li>
+                                    <li><a class="dropdown-item" href="">Post property</a></li>
+                                    <li><a class="dropdown-item" href="">Investment link</a></li>
+                                    <li><a class="dropdown-item" href="">Service provider</a></li>
+
+
+                                </ul>
+                            </li>
+                             <li class="nav-item dropdown">
+                                <a class="nav-link" href="/download"  role="button"  aria-haspopup="true" aria-expanded="false">
+                                Downloads
+                                </a>
+
+                            </li>
+                             <li class="nav-item dropdown">
+                                <a class="nav-link" href="/contact" role="button" aria-haspopup="true" aria-expanded="false">
                                     Contact
                                 </a>
 
@@ -271,27 +308,28 @@
 
                     <ul class="contact-info">
                         <li>
-                            Address: 20/F Green Road, Dhanmondi, Dhaka
+                          Bekim house, 1st floor, Apartment 2B
+                          Crossway Road/Westlands
+                          <br>
+                            Address: P.O BOX 1831-0200, Nairobi
                         </li>
                         <li>
-                            Email: <a href="mailto:info@themevessel.com">info@themevessel.com</a>
+                            Email: <a href="">realmastltd@gmail.com</a>
                         </li>
                         <li>
-                            Phone: <a href="tel:+0477-85x6-552">+XXXX XXXX XXX</a>
+                            Office mobile: <a href="">+254 722409481/ +254 733409481</a>
                         </li>
-                        <li>
-                            Fax: +XXXX XXXX XXX
-                        </li>
+
                     </ul>
-                <!--
+
                     <ul class="social-list clearfix">
                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                        <!--<li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>-->
                         <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
-                  -->
+
                 </div>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
@@ -301,7 +339,7 @@
                     </h4>
                     <ul class="links">
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Dashboard</a>
+                            <a href="/login"><i class="fa fa-angle-right"></i>Dashboard</a>
                         </li>
                         <!--
                         <li>
@@ -414,7 +452,7 @@
 
 
 <!-- External JS libraries -->
-<script src="/js/jquery-2.2.0.min.js"></script>
+<script src="/js/jquery-2.1.1.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.selectBox.js"></script>
@@ -433,6 +471,8 @@
 <script src="/js/leaflet-providers.js"></script>
 <script src="/js/leaflet.markercluster.js"></script>
 <script src="/js/maps.js"></script>
+<script src="/js/jquery.printPage.js"></script>
+@yield('script2')
 <!--<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0N5pbJN10Y1oYFRd0MJ_v2g8W2QT74JE"></script>
 <script src="/js/ie-emulation-modes-warning.js"></script>

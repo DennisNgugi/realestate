@@ -29,5 +29,11 @@ class Property extends Model
     public function location(){
       return $this->belongsTo(Location::class, 'location_id');
     }
+    public function propertyimage(){
+      return $this->hasMany(Images::class, 'property_id');
+    }
+    public function inquiry(){
+      return $this->hasMany(Inquiry::class , 'property_id');
+    }
 
 }

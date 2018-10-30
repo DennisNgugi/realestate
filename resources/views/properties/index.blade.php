@@ -1,3 +1,4 @@
+@if(isset(Auth::user()->email))
 @extends('layouts.admin')
 @section('button')
 
@@ -18,6 +19,7 @@
       <th>Property type</th>
       <th>Location</th>
       <th>Price</th>
+      <th>Available at</th>
       <th>Status</th>
       <th>Action</th>
     </tr>
@@ -31,6 +33,11 @@
       <td>{{$p->propertytype->property_type}}</td>
       <td>{{$p->location->locations}}</td>
       <td>{{$p->price}}</td>
+      @if($p->available == "")
+      <td>{{"N/A"}}</td>
+      @else
+      <td>{{$p->available}}</td>
+      @endif
       @if($p->status == 0)
       <td><span class="badge badge-success">{{"Available"}}</span></td>
       @else
@@ -46,20 +53,21 @@
           <form action="{{route('properties.destroy',$p->id)}}" method="post">
             @csrf
              @method('DELETE')
-            <input type="submit"  value="Delete">
+            <input type="submit"  onclick="return confirm('Are you sure you want to delete?')"  value="Delete">
           </form>
 
         </li>
         <li class="divider"></li>
-
+            <li><a href="/book/{{$p->id}}" class="font-bold">Set as booked</a></li>
           </ul>
       </div>
       </td>
-      <td>
 
-      </td>
     </tr>
     @endforeach
   </tbody>
 </table>
 @stop
+@else
+   <script>window.location = "/login";</script>
+  @endif

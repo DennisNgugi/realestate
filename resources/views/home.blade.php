@@ -1,4 +1,15 @@
 @extends('layouts.app')
+@section('list')
+@foreach($list as $l)
+<li><a class="dropdown-item" href="/property_list/{{$l->id}}">{{$l->property_purpose}}</a></li>
+@endforeach
+@stop
+
+@section('links')
+@foreach($s1 as $s)
+<li><a class="dropdown-item" href="/services/{{$s->id}}">{{$s->service}}</a></li>
+@endforeach
+@stop
 @section('content')
 
 <!-- Banner start -->
@@ -6,31 +17,32 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="/img/banner-3.jpg" alt="banner-1">
+                <img class="d-block w-100" src="/img/banner-1.jpg" alt="banner-1">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container">
                         <div class="text-center">
-                            <h1 data-animation="animated fadeInDown delay-05s">We love make things <br/>amazing and simple</h1>
+                            <h1 data-animation="animated fadeInDown delay-05s">Simplified<br/>property solutions</h1>
                             <p data-animation="animated fadeInUp delay-10s">
 
                             </p>
-                          <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Get Started Now</a>
+                          <!--<a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Get Started Now</a> -->
                         </div>
+
                     </div>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img class="d-block w-100" src="/img/banner-3.jpg" alt="banner-2">
+                <img class="d-block w-100" style="min-height:400px;" src="/img/banner-2.jpg" alt="banner-2">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container">
                         <div class="text-center">
-                            <h1 data-animation="animated fadeInDown delay-05s">Find Your <br/> Dream Properties</h1>
-                            <p data-animation="animated fadeInUp delay-10s">
+                            <h1 data-animation="animated fadeInDown delay-05s">Simplified<br/>property solutions</h1>
+                          <!--  <p data-animation="animated fadeInUp delay-10s">
                                 This is real estate website template based on Bootstrap 4 framework.
                             </p>
                             <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Get Started Now</a>
-                            <!--<a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a>-->
+                            <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a>-->
                         </div>
                     </div>
                 </div>
@@ -41,12 +53,12 @@
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container">
                         <div class="text-center">
-                            <h1 data-animation="animated fadeInUp delay-05s">Best Place For <br/> Sell Properties</h1>
-                            <p data-animation="animated fadeInUp delay-10s">
+                            <h1 data-animation="animated fadeInUp delay-05s">Simplified<br/>property solutions</h1>
+                          <!--  <p data-animation="animated fadeInUp delay-10s">
                                 This is real estate website template based on Bootstrap 4 framework.
                             </p>
                           <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Get Started Now</a>
-                          <!--  <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a> -->
+                           <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a> -->
                         </div>
                     </div>
                 </div>
@@ -64,47 +76,33 @@
         </a>
     </div>
 </div>
-<!-- banner end -->
+<!-- banner end
 
-<!-- Search area start -->
-<!--
+                    <ul class="social-list clearfix">
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+
+ -->
+
 <div class="search-area" id="search-area-1">
     <div class="container">
         <div class="search-area-inner">
             <div class="search-contents ">
-                <form action="https://storage.googleapis.com/themevessel-xero/index.html" method="GET">
-                    <div class="row">
+
+
+                        <form class="" action="index.html" method="post">
+                            <div class="row">
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="area">
-                                    <option>Area From</option>
-                                    <option>1500</option>
-                                    <option>1200</option>
-                                    <option>900</option>
-                                    <option>600</option>
-                                    <option>300</option>
-                                    <option>100</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-3">
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="property-status">
-                                    <option>Property Status</option>
-                                    <option>For Sale</option>
-                                    <option>For Rent</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 col-md-3">
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="location">
-                                    <option>Location</option>
-                                    <option>United Kingdom</option>
-                                    <option>American Samoa</option>
-                                    <option>Belgium</option>
-                                    <option>Canada</option>
-                                    <option>Delaware</option>
+                                <select class="selectpicker search-fields" name="location" required>
+                                    <option>Search Location</option>
+                                    @foreach($loc as $l)
+                                  <option id="loc{{$l->id}}" value="{{$l->id}}">{{$l->locations}}</option>
+                                      @endforeach
                                 </select>
                             </div>
                         </div>
@@ -112,14 +110,28 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="category">
                                     <option>Property Types</option>
-                                    <option>Residential</option>
-                                    <option>Commercial</option>
-                                    <option>Land</option>
+                                    @foreach($type as $t)
+                                    <option id="type{{$t->id}}" value="{{$t->id}}">{{$t->property_type}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
+
                     </div>
+                      </form>
+
+                    @section('script')
+                      <script>
+                        $(document).ready(function(){
+                          $('#loc1').click(function(){
+                        console.log('data');
+                          });
+                        });
+                      </script>
+
+                    @stop
                     <div class="row">
+                        <!--
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="bedrooms">
@@ -136,6 +148,8 @@
                                 </select>
                             </div>
                         </div>
+
+
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="bathrooms">
@@ -147,6 +161,7 @@
                                 </select>
                             </div>
                         </div>
+                      -->
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
                                 <div class="range-slider">
@@ -157,16 +172,17 @@
                         </div>
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
-                                <button class="search-button btn-md btn-color" type="submit">Search</button>
+                                <button class="search-button btn-md btn-color" type="search">Search</button>
                             </div>
                         </div>
                     </div>
-                </form>
+
             </div>
         </div>
     </div>
 </div>
- Search area start -->
+
+
 
 <!-- Featured properties start -->
 <div class="featured-properties content-area-2">
@@ -181,51 +197,65 @@
             <li data-filter="2" class="btn btn-inline filtr-button filtr">House</li>
             <li data-filter="3" class="btn btn-inline filtr-button filtr">Office</li>
         </ul>-->
-        <div class="row filter-portfolio">
-            <div class="cars">
+        <div class="properties-details-page content-area-15">
+            <div class="container">
+                <div class="row">
             @foreach($post as $p)
                 <div class="col-lg-4 col-md-6 col-sm-12 filtr-item" data-category="3">
                     <div class="property-box">
                         <div class="property-thumbnail">
-                            <a href="/preview_property/{{$p->id}}" class="property-img">
+                            <a href="/property/{{$p->id}}" class="property-img">
                                   @if($p->status == 0)
-                                <div class="tag button alt featured">Available</div>
+                                  <div class="tag button alt featured">Available</div>
                                     @else
                                   <div class="tag button alt featured">Not Available</div>
                                   @endif
+                                    @if($p->propertypurpose->property_purpose == "Sale" )
+                                  <div class="tag button alt featured my-5">For Sale</div>
+                                      @elseif($p->propertypurpose->property_purpose == "Rent")
+                                      <div class="tag button alt featured my-5">For Rent</div>
+                                      @else
+                                      <div class="tag button alt featured my-5">Short Stay</div>
+                                      @endif
                                 <div class="price-ratings-box">
                                     <h3 class="price">
                                        {{'Ksh.'.$p->price}}
                                     </h3>
 
                                 </div>
+
                                 <img src="{{url('images/'.$p->featured_image)}}" alt="property-7" class="img-fluid">
                             </a>
+                            <!--
                             <div class="property-overlay">
-                                <a href="properties-details.html" class="overlay-link">
+                                <a href="/property/{{$p->id}}" class="overlay-link">
                                     <i class="fa fa-link"></i>
                                 </a>
-                                <!--<a class="overlay-link property-video" title="Test Title">
+                                <a class="overlay-link property-video" title="Test Title">
                                     <i class="fa fa-video-camera"></i>
                                 </a>
                               -->
-                                <div class="property-magnify-gallery">
-                                    <a href="/img/property-7.jpg" class="overlay-link">
-                                        <i class="fa fa-expand"></i>
+                                <!--<div class="property-magnify-gallery">
+                                    <a href="/property/{{$p->id}}" class="overlay-link">
+                                      <i class="fa fa-expand"></i>
+
                                     </a>
+
                                     <a href="/img/property-6.jpg" class="hidden"></a>
                                     <a href="/img/property-3.jpg" class="hidden"></a>
+
                                 </div>
-                            </div>
+
+                            </div>  -->
                         </div>
                         <div class="detail">
                             <h1 class="title">
-                                <a href="/preview_property/{{$p->id}}">{{$p->property_name}}</a>
+                                <a href="/property/{{$p->id}}">{{$p->property_name}}</a>
                             </h1>
                             <div class="location">
-                                <a href="properties-details.html">
+
                                     <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>{{$p->location->locations}}
-                                </a>
+
                             </div>
                             <ul class="facilities-list clearfix">
                               @if($p->bedrooms == '')
@@ -243,10 +273,13 @@
                                     <i class="flaticon-bath"></i> {{$p->bathrooms}} Bathrooms
                                 </li>
                                 @endif
-                              <!--  <li>
+                                @if($p->square_foot == '')
+                                <li></li>
+                                @else
+                               <li>
                                     <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> Sq Ft:3400
                                 </li>
-                              -->
+                                @endif
                               @if($p->garage == '')
                                   <li></li>
                                 @else
@@ -274,6 +307,7 @@
                     </div>
                 </div>
                 @endforeach
+
                   <!--
                 <div class="col-lg-4 col-md-6 col-sm-12 filtr-item" data-category="3, 2, 1">
                     <div class="property-box">
@@ -630,12 +664,16 @@
                 </div>
               -->
             </div>
+            <a href="/all_properties" class="btn btn-info">View More Properties</a>
+
         </div>
     </div>
 </div>
+  </div>
+
 <!-- Featured properties end -->
 
-<!-- services start -->
+<!-- services start
 <div class="services content-area-17">
     <div class="container">
         <div class="main-title">
@@ -699,7 +737,7 @@
         </div>
     </div>
 </div>
-<!-- services end -->
+ services end -->
 
 <!-- Recent Properties start
 <div class="recent-properties content-area">

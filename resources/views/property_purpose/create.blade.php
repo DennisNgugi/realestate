@@ -1,4 +1,4 @@
-
+@if(isset(Auth::user()->email))
 @extends('layouts.admin')
 @section('title')
   <h5>Add property purpose</h5>
@@ -16,4 +16,8 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
+
 @stop
+@else
+   <script>window.location = "/login";</script>
+  @endif

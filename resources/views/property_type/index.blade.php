@@ -1,3 +1,4 @@
+@if(isset(Auth::user()->email))
 @extends('layouts.admin')
 @section('button')
 
@@ -32,7 +33,7 @@
           <form action="{{route('property_type.destroy',$p->id)}}" method="post">
             @csrf
              @method('DELETE')
-            <input type="submit"  value="Delete">
+            <input type="submit"  onclick="return confirm('Are you sure you want to delete?')"  value="Delete">
           </form>
 
         </li>
@@ -48,4 +49,7 @@
     @endforeach
   </tbody>
 </table>
+@else
+   <script>window.location = "/login";</script>
+  @endif
 @stop

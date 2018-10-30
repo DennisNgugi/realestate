@@ -1,8 +1,8 @@
-
+@if(isset(Auth::user()->email))
 @extends('layouts.admin')
 @section('title')
   <h5>Edit Location</h5>
-  
+
 @stop
 @section('content')
 <form class="" action="{{route('location.update',$loc->id)}}" method="POST">
@@ -23,4 +23,8 @@
     <button type="submit" class="btn btn-primary">Save</button>
   </fieldset>
 </form>
+
 @stop
+@else
+   <script>window.location = "/login";</script>
+  @endif
