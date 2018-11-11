@@ -16,8 +16,15 @@
 <div class="banner" id="banner">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="/img/banner-1.jpg" alt="banner-1">
+          <?php $count=0; ?>
+          @foreach($img as $i)
+          @if($count == 0)
+          <?php $key = "active"; ?>
+          @else
+          <?php $key = ""; ?>
+          @endif
+            <div class="carousel-item <?php echo $key; ?>">
+                <img class="d-block w-100" src="/home-slides/{{$i->slider}}" alt="banner-1">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container">
                         <div class="text-center">
@@ -31,18 +38,20 @@
                     </div>
                 </div>
             </div>
-
+            <?php $count++; ?>
+            @endforeach
+          <!--
             <div class="carousel-item">
                 <img class="d-block w-100" style="min-height:400px;" src="/img/banner-2.jpg" alt="banner-2">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container">
                         <div class="text-center">
                             <h1 data-animation="animated fadeInDown delay-05s">Simplified<br/>property solutions</h1>
-                          <!--  <p data-animation="animated fadeInUp delay-10s">
+                           <p data-animation="animated fadeInUp delay-10s">
                                 This is real estate website template based on Bootstrap 4 framework.
                             </p>
                             <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Get Started Now</a>
-                            <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a>-->
+                            <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a>
                         </div>
                     </div>
                 </div>
@@ -54,15 +63,16 @@
                     <div class="carousel-content container">
                         <div class="text-center">
                             <h1 data-animation="animated fadeInUp delay-05s">Simplified<br/>property solutions</h1>
-                          <!--  <p data-animation="animated fadeInUp delay-10s">
+                          <p data-animation="animated fadeInUp delay-10s">
                                 This is real estate website template based on Bootstrap 4 framework.
                             </p>
                           <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Get Started Now</a>
-                           <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a> -->
+                           <a data-animation="animated fadeInUp delay-12s" href="#" class="btn btn-lg btn-round btn-white-lg-outline">Free Download</a>
                         </div>
                     </div>
                 </div>
             </div>
+          -->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="slider-mover-left" aria-hidden="true">
@@ -88,6 +98,7 @@
 
  -->
 
+<!--
 <div class="search-area" id="search-area-1">
     <div class="container">
         <div class="search-area-inner">
@@ -131,7 +142,7 @@
 
                     @stop
                     <div class="row">
-                        <!--
+
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="bedrooms">
@@ -161,7 +172,7 @@
                                 </select>
                             </div>
                         </div>
-                      -->
+
                         <div class="col-6 col-lg-3 col-md-3">
                             <div class="form-group">
                                 <div class="range-slider">
@@ -181,14 +192,14 @@
         </div>
     </div>
 </div>
-
+  -->
 
 
 <!-- Featured properties start -->
-<div class="featured-properties content-area-2">
+<div class="featured-properties content-area-2" id="featured">
     <div class="container">
         <div class="main-title">
-            <h1>Featured Properties</h1>
+            <h1 style="color:white;">Featured Properties</h1>
         </div>
         <!--
         <ul class="list-inline-listing filters filteriz-navigation">
@@ -197,7 +208,7 @@
             <li data-filter="2" class="btn btn-inline filtr-button filtr">House</li>
             <li data-filter="3" class="btn btn-inline filtr-button filtr">Office</li>
         </ul>-->
-        <div class="properties-details-page content-area-15">
+
             <div class="container">
                 <div class="row">
             @foreach($post as $p)
@@ -208,7 +219,7 @@
                                   @if($p->status == 0)
                                   <div class="tag button alt featured">Available</div>
                                     @else
-                                  <div class="tag button alt featured">Not Available</div>
+                                  <div class="tag button alt featured">Booked</div>
                                   @endif
                                     @if($p->propertypurpose->property_purpose == "Sale" )
                                   <div class="tag button alt featured my-5">For Sale</div>
@@ -277,7 +288,7 @@
                                 <li></li>
                                 @else
                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> Sq Ft:3400
+                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> Sq Ft {{$p->square_foot}}
                                 </li>
                                 @endif
                               @if($p->garage == '')
@@ -669,7 +680,7 @@
         </div>
     </div>
 </div>
-  </div>
+
 
 <!-- Featured properties end -->
 

@@ -16,8 +16,8 @@
       <th>Mobile</th>
       <th>Message</th>
       <th>Time</th>
-      <th>Archive</th>
-      <th>Unarchive</th>
+      <th>Activate</th>
+      <th>Deactivate</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -41,14 +41,14 @@
         @else
         <form action="/issue/{{$p->id}}/{{$p->property_id}}" method="post">
           @csrf
-          <input type="submit" onclick="return confirm('Do you want to issue out this property?')" class="btn btn-success" value="Archive">
+          <input type="submit" onclick="return confirm('Do you want to issue out this property?')" class="btn btn-success" value="Activate">
         </form>
         @endif
       </td>
       <td>
         <form action="/unissue/{{$p->id}}/{{$p->property_id}}" method="post">
           @csrf
-          <input type="submit" onclick="return confirm('Do you want to unarchive this property?')" class="btn btn-danger" value="Unarchive">
+          <input type="submit" onclick="return confirm('Do you want to deactivate this property?')" class="btn btn-danger" value="Deactivate">
         </form>
       </td>
       <td>

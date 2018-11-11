@@ -22,58 +22,90 @@
 <!-- Sub banner end -->
 
 <!-- Properties details page start -->
-<div class="properties-details-page content-area-15">
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12 col-xs-12 slider">
-                <div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-60">
-                    <div class="heading-properties">
-
-                    </div>
-                    <!-- main slider carousel items -->
-
-                    <!-- main slider carousel nav controls -->
-
-                </div>
-
-                <!-- Tabbing box start -->
-                <div class="tabbing tabbing-box mb-60">
-
-                    <div class="tab-content" id="carTabContent">
-                        <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
-                            <h2 class="heading">Contact</h2>
-                            <div class="row">
-
-                            <div class="col-md-6">
-
-                              <ul class="contact-info">
-                                  <li>
-                                    Bekim house, 1st floor, Apartment 2B
-                                    Crossway Road/Westlands
-                                    <br>
-                                      Address: P.O BOX 1831-0200, Nairobi
-                                  </li>
-                                  <li>
-                                      Email: <a href="">realmastltd@gmail.com</a>
-                                  </li>
-                                  <li>
-                                      Office mobile: <a href="">+254 722409481/ +254 733409481</a>
-                                  </li>
-
-                              </ul>
 
 
 
-                             </div>
-                        </div>
-                        </div>
-                </div>
+              <!-- Contact 1 start -->
+              <div class="contact-1 content-area-7">
+                  <div class="container">
+                          <div class="row">
+                          <div class="col-lg-12 col-md-12 col-md-12 ">
+                              <!--<form action="#" method="GET" enctype="multipart/form-data">
+                                  <div class="row">
+                                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="form-group name">
+                                              <input type="text" name="name" class="form-control" placeholder="Name">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="form-group email">
+                                              <input type="email" name="email" class="form-control" placeholder="Email">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="form-group subject">
+                                              <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="form-group number">
+                                              <input type="text" name="phone" class="form-control" placeholder="Number">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="form-group message">
+                                              <textarea class="form-control" name="message" placeholder="Write message"></textarea>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                          <div class="send-btn">
+                                              <button type="submit" class="btn btn-info btn-md btn-message">Send Message</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>-->
+                              <div class="contact-info">
+                                  <h3>Contact Info</h3>
+                                  <div class="media">
+                                      <i class="fa fa-map-marker"></i>
+                                      <div class="media-body">
+                                          <h5 class="mt-0">Office Address</h5>
+                                          <p>Bekim house, 1st floor, Apartment 2B Crossway Road/Westlands <br>
+                                              Address: P.O BOX 1831-0200, Nairobi</p>
+                                      </div>
+                                  </div>
+                                  <div class="media">
+                                      <i class="fa fa-phone"></i>
+                                      <div class="media-body">
+                                          <h5 class="mt-0">Phone Number</h5>
+                                          <p>Office: +254 722409481/ +254 733409481</p>
+                                          <!--<p>Mobile<a href="tel:+0477-85x6-552">: +55 417 634 7X71</a> </p>-->
+                                      </div>
+                                  </div>
+                                  <div class="media mrg-btn-0">
+                                      <i class="fa fa-envelope"></i>
+                                      <div class="media-body">
+                                          <h5 class="mt-0">Email Address</h5>
+                                          <p>realmastltd@gmail.com</p>
 
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
 
-                    </div>
+                          <div class=" offset-lg-1 col-lg-4 offset-md-0 col-md-5">
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Contact 1 end -->
                 </div>
               </div>
-            </div>
+
 
 
 

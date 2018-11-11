@@ -33,11 +33,11 @@
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
-                        <div class="dropdown profile-element"> <span>
+                        <div class="dropdown profile-element">
                             <!--<img alt="image" class="img-circle" src="img/profile_small.jpg" />-->
                             <h2 style="color:white;">Realmast</h2>
-                             </span>
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                          <!--  <a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
                           <!--  <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
                              </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -60,6 +60,7 @@
                             <li><a href="{{route('properties.create')}}">Add Property</a></li>
                             <li><a href="/properties">Manage Property</a></li>
                             <li><a href="{{route('image.create')}}">Add Property Slideshow images</a></li>
+                            <li><a href="/image">Manage Slideshow images</a></li>
 
 
                         </ul>
@@ -108,6 +109,10 @@
 
                     </li>
                     <li>
+                        <a href="/service_enquiries"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Service Enquiries</span></a>
+
+                    </li>
+                    <li>
                         <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Services</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{route('add_services.create')}}">Add new Service</a></li>
@@ -123,6 +128,13 @@
                               <li><a href="{{route('downloads.create')}}">Add new Download</a></li>
                             <li><a href="/downloads">Manage Download</a></li>
 
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Home slider</span><span class="fa fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="/homeslider/create">Add new Home Slider</a></li>
+                              <li><a href="/homeslider">Manage Home Slider</a></li>
                         </ul>
                     </li>
 

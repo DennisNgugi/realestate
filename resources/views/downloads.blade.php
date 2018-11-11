@@ -22,39 +22,33 @@
 <!-- Sub banner end -->
 
 <!-- Properties details page start -->
-<div class="properties-details-page content-area-15">
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 col-xs-12 slider">
-                <div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-60">
-                    <div class="heading-properties">
 
-                    </div>
-                    <!-- main slider carousel items -->
-
-                    <!-- main slider carousel nav controls -->
-
-                </div>
 
                 <!-- Tabbing box start -->
                 <div class="tabbing tabbing-box mb-60">
                     <div class="tab-content" id="carTabContent">
                         <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
-                            <h2 class="heading">Downloads</h2>
-                            <?php $pos=1 ?>
+                            <h2 class="heading mb-4">Downloads</h2>
 
-                              @foreach($down as $dd)
-                              <p>{{$pos}}.<a style="color:blue;"href="{{route('download',$dd->file)}}">{{$dd->name}}</a>
-                                  <?php $pos++ ?>
+
+                              @foreach($dcat as $dd)
+                              <h5>{{$dd->category}}</h5>
+                              <?php $pos=1 ?>
+                              @foreach($dd->download as $d)
+                              <p>{{$pos}}.<a style="color:blue;"href="{{route('download',$d->file)}}">{{$d->name}}</a>
+                                    <?php $pos++ ?>
+                                    @endforeach
+
                               @endforeach
 
 
 
                            </p>
 
-
-
-                        </div>
                         </div>
                 </div>
                     </div>

@@ -10,6 +10,7 @@ use App\PropertyType;
 use App\Location;
 use App\Images;
 use App\Inquiry;
+use App\Slider;
 use Image;
 use App\Service;
 use Illuminate\Http\Request;
@@ -30,13 +31,13 @@ class PropertyController extends Controller
       $iss = Inquiry::findorFail($id);
       $prop = Property::findorFail($p_id);
       Property::where('id',$prop->id)->update(['status' => $iss->id]);
-      return Redirect::back()->with('success','Property has been archived Successfully !');
+      return Redirect::back()->with('success','Property has been activated Successfully !');
     }
     public function unissue($id,$p_id){
       $iss = Inquiry::findorFail($id);
       $prop = Property::findorFail($p_id);
       Property::where('id',$prop->id)->update(['status' => 0]);
-      return Redirect::back()->with('success','Property has been unarchived Successfully !');
+      return Redirect::back()->with('success','Property has been deactivated Successfully !');
     }
     public function featured(){
       $post = Property::where('status',0)->get();
@@ -49,22 +50,28 @@ class PropertyController extends Controller
     public function home(){
       $post = Property::all();
       $s1 = Service::all();
+      $img = Slider::all();
       $type = PropertyType::all();
       $loc = Location::all();
       $list = PropertyPurpose::all();
-      return view('home',compact('post','s1','list','loc','type'));
+      return view('home',compact('img','post','s1','list','loc','type'));
     }
     public function about(){
       $s1 = Service::all();
       $list = PropertyPurpose::all();
 
-      return view('about',compact('s1','loc','list'));
+      return view('about2',compact('s1','loc','list'));
     }
     public function allproperty(){
       $post = Property::all();
       $s1 = Service::all();
       $list = PropertyPurpose::all();
       return view('allproperties',compact('post','s1','list'));
+    }
+    public function enquiry(){
+      $s5 = Service::all();
+      $list = PropertyPurpose::all();
+      return view('enquiry',compact('s5','list'));
     }
     public function contact(){
       $post = Property::all();
@@ -113,7 +120,9 @@ class PropertyController extends Controller
       'property_type'=>'required',
       'price'=>'required|integer',
       'description'=>'required',
-      'image' => 'required | mimes:jpeg,jpg,png ',
+      'image' => 'required | mimes:jpeg,jpg,png',
+      'photo1' => 'required | mimes:jpeg,jpg,png',
+      'photo2' => 'required | mimes:jpeg,jpg,png',
 
     ]);
 
@@ -127,13 +136,13 @@ if($request->hasFile('photo1')){
   $image = $request->file('photo1');
   $filename1 = $image->getClientOriginalName();
   $location = public_path('images/'.$filename1);
-  Image::make($image)->resize(350, 250)->save($location);
+  Image::make($image)->resize(250, 250)->save($location);
 }
 if($request->hasFile('photo2')){
   $image = $request->file('photo2');
   $filename2 = $image->getClientOriginalName();
   $location = public_path('images/'.$filename2);
-  Image::make($image)->resize(350, 250)->save($location);
+  Image::make($image)->resize(250, 250)->save($location);
 }
         $post = new Property;
         $post->property_name = $request->get('property_name');

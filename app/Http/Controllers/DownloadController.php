@@ -26,11 +26,11 @@ class DownloadController extends Controller
       return view('downloads.index',compact('down'));
     }
     public function display(){
-      $down = Download::all();
+
       $dcat = DownloadCategory::with('download')->get();
       $s1 = Service::all();
       $list = PropertyPurpose::all();
-      return view('/downloads',compact('down','s1','list','dcat'));
+      return view('/downloads',compact('s1','list','dcat'));
     }
 
     /**

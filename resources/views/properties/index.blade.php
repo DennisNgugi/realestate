@@ -57,8 +57,7 @@
           </form>
 
         </li>
-        <li class="divider"></li>
-            <li><a href="/book/{{$p->id}}" class="font-bold">Set as booked</a></li>
+        
           </ul>
       </div>
       </td>

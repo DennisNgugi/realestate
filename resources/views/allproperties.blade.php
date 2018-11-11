@@ -81,15 +81,18 @@
 
                               @if($p->bathrooms == '')
                               <li></li>
-                              @lse
+                              @else
                               <li>
                                   <i class="flaticon-bath"></i> {{$p->bathrooms}} Bathrooms
                               </li>
                               @endif
-                            <!--  <li>
-                                  <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> Sq Ft:3400
+                              @if($p->square_foot == '')
+                              <li></li>
+                              @else
+                             <li>
+                                  <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> Sq Ft:{{$p->square_foot}}
                               </li>
-                                                  -->
+                                  @endif
                             @if($p->garage == '')
                                 <li></li>
                               @else

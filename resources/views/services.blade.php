@@ -22,26 +22,17 @@
 <!-- Sub banner end -->
 
 <!-- Properties details page start -->
-<div class="properties-details-page content-area-15">
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12 col-xs-12 slider">
-                <div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-60">
-                    <div class="heading-properties">
 
-                    </div>
-                    <!-- main slider carousel items -->
-
-                    <!-- main slider carousel nav controls -->
-
-                </div>
 
                 <!-- Tabbing box start -->
                 <div class="tabbing tabbing-box mb-60">
 
                     <div class="tab-content" id="carTabContent">
                         <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
-                            <h2 class="heading">{{$s->service}}</h2>
+                            <h2 class="heading mb-4">{{$s->service}}</h2>
                            <p>{{$s->description}}</p>
                         </div>
                         </div>
@@ -50,8 +41,7 @@
 
                     </div>
                 </div>
-              </div>
-            </div>
+
 
 
 

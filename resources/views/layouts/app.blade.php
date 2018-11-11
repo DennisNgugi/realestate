@@ -19,8 +19,9 @@
     <link type="text/css" rel="stylesheet" href="/css/jquery.selectBox.css">
     <link type="text/css" rel="stylesheet" href="/css/dropzone.css">
     <link type="text/css" rel="stylesheet" href="/css/rangeslider.css">
-    <!--<link type="text/css" rel="stylesheet" href="/css/animate.min.css">-->
+    <link type="text/css" rel="stylesheet" href="/css/animate.min.css">
     <link type="text/css" rel="stylesheet" href="/css/leaflet.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <!--  <link type="text/css" rel="stylesheet" href="/css/map.css">-->
   <!--  <link type="text/css" rel="stylesheet" href="/css/jquery.mCustomScrollbar.css">-->
     <link type="text/css" rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.min.css">
@@ -50,8 +51,18 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light rounded">
                     <a class="navbar-brand logo navbar-brand d-flex w-50 mr-auto" href="/">
-                        <img src="/img/banner-4.jpg" alt="logo">
-                      <h3>Realmast</h3>
+                        <img class="mr-2 my-2" id="logo" src="/img/banner-4.png" alt="logo">
+                      <h3 class="my-2" id="realmast">Realmast</h3>
+                      <style>
+                        #realmast{
+                          font-family: 'Lobster', cursive;
+                          font-size: 40px;
+                        }
+                        #logo{
+                          width: 9%;
+                          height: 5%;
+                        }
+                      </style>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="fa fa-bars"></span>
@@ -309,7 +320,7 @@
                     <ul class="contact-info">
                         <li>
                           Bekim house, 1st floor, Apartment 2B
-                          Crossway Road/Westlands
+                          Crossway Road <a href="/login">/</a>Westlands
                           <br>
                             Address: P.O BOX 1831-0200, Nairobi
                         </li>
@@ -334,13 +345,11 @@
             </div>
             <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
                 <div class="footer-item">
-                    <h4>
-                        Useful Links
-                    </h4>
+
                     <ul class="links">
-                        <li>
-                            <a href="/login"><i class="fa fa-angle-right"></i>Dashboard</a>
-                        </li>
+                      <!--  <li>
+                            <a href="/login"><i class="fa fa-angle-right"></i></a>
+                        </li>-->
                         <!--
                         <li>
                             <a href="#"><i class="fa fa-angle-right"></i>Service</a>

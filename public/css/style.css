@@ -79,6 +79,16 @@ body {
     max-width: 100% !important;
     height: auto;
 }
+#featured{
+  /*background-image: url('/img/garrett-parker.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/garrett-parker.jpg");
+  background: rgba(0, 0, 0, 0.04) url(/img/garrett-parker.jpg);*/
+  background-color: #FFEFD5;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 .page_loader {
     position: fixed;
@@ -675,6 +685,19 @@ input[type=checkbox]:checked + label:before {
 
 .content-area-15 {
     padding: 100px 0 40px;
+    /*background: rgba(0, 0, 0, 0.04) url(/img/garrett-parker.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    color:#fff;
+    */
+}
+.col-center-block {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    /* margin-left: auto; margin-right: auto; */
 }
 
 .content-area-16 {
@@ -7606,6 +7629,7 @@ body.off-canvas-sidebar-open {
 
     .carousel-inner img {
         width: 100%;
+
     }
 
     .widget {
@@ -7681,16 +7705,19 @@ body.off-canvas-sidebar-open {
     }
 
     .sticky-header .navbar-expand-lg .navbar-nav .nav-link {
-        color: #fff;
+        color: #FFEFD5;
     }
 
-    .sticky-header .open-offcanvas {
+    .sticky-header  #realmast {
         color: #fff;
+    }
+    .sticky-header .open-offcanvas {
+        color: #FFEFD5;
         display: inline-block;
     }
 
     .header-shrink {
-        background: #fff;
+        background: #FFEFD5;
         -webkit-transition: 0.5s;
         -moz-transition: 0.5s;
         -ms-transition: 0.5s;

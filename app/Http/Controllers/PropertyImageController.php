@@ -17,7 +17,8 @@ class PropertyImageController extends Controller
      */
     public function index()
     {
-        
+        $propimg = Images::all();
+        return view('properties.display',compact('propimg'));
     }
 
     /**
@@ -63,7 +64,7 @@ class PropertyImageController extends Controller
 }
 
 
-
+return redirect('/image')->with('success', 'Property Image Slider has been added');
 
     }
 
@@ -110,5 +111,8 @@ class PropertyImageController extends Controller
     public function destroy($id)
     {
         //
+        $img  = Images::find($id);
+        $img->delete();
+         return redirect('/image')->with('success', 'Property Image Slider has been deleted');
     }
 }

@@ -131,17 +131,7 @@
                     </ul>
                   <!--  <a href="/details/{{$post->id}}" class="btn btn-info">Print Details</a>-->
                     <a href="/print/{{$post->id}}" class="btn btn-info" id="print">Print details</a>
-                    @section('script2')
-                    <script type="text/javascript">
 
-                      $(document).ready(function(){
-
-                          $('#print').printPage();
-
-                      });
-
-                      </script>
-                    @stop
                     <div class="tab-content" id="carTabContent">
                         <div class="tab-pane active show" id="one" role="tabpanel" aria-labelledby="one-tab">
                             <h3 class="heading">Property Description</h3>

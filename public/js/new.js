@@ -2,6 +2,10 @@ $(function () {
 
     "use strict";
 
+
+        $('#print').printPage();
+
+
     // On window's load
     $(window).on('load', function () {
         populateColorPlates();
@@ -42,19 +46,21 @@ $(function () {
                     $('.sticky-header').addClass('header-shrink');
                 }
                 if($('.do-sticky').length < 1) {
-                    $('.logo img').attr('src', '/img/banner-4.jpg');
+                    $('.logo img').attr('src', '/img/banner-4.png');
                 }
             }
             else {
                 $('.sticky-header').removeClass('header-shrink');
                 if($('.do-sticky').length < 1) {
-                    $('.logo img').attr('src', '/img/banner-4.jpg');
+                    $('.logo img').attr('src', '/img/banner-4.png');
                 }
             }
         } else {
-            $('.logo img').attr('src', '/img/banner-4.jpg');
+            $('.logo img').attr('src', '/img/banner-4.png');
         }
     }
+
+
 
     function doSticky()
     {

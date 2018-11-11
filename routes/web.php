@@ -26,8 +26,8 @@ Route::get('/services/{id}','ServiceController@show')->name('service');
 Route::get('/details/{id}','PropertyDetailController@download')->name('details');
 Route::get('/print/{id}','PropertyDetailController@print')->name('print');
 //Route::get('/details/','PropertyDetailController@show')->name('details');
-/*Route::get('/login', function () {
-    return view('login');
+/*Route::get('/enq', function () {
+    return view('enquiry');
 });*/
 Route::get('/login', 'MainController@index');
 Route::post('/login/checklogin', 'MainController@checklogin');
@@ -35,17 +35,24 @@ Route::get('/logout', 'MainController@logout');
 //Route::get('/','ServiceController@service')->name('service');
 Route::get('/all_properties','PropertyController@allproperty');
 Route::get('/contact','PropertyController@contact');
+Route::get('/enquiry','EnquiryController@enquiry');
+Route::get('/service_enquiries','EnquiryController@index');
+Route::post('/enquiry','EnquiryController@store');
 Route::get('/about','PropertyController@about');
 Route::get('/property_list/{id}','PropertyController@showProperty')->name('list');
 Route::resource('property_type','PropertyTypeController');
 Route::resource('property_purpose','PropertyPurposeController');
 Route::resource('location','LocationController');
 Route::resource('properties','PropertyController');
-Route::post('book/{id}','PropertyController@book')->name('book');
 Route::resource('category','DownloadCategoryController');
 Route::resource('image','PropertyImageController');
 Route::resource('add_services','ServiceController');
 Route::resource('downloads','DownloadController');
+//Route::resource('homeslider','SliderController');
+Route::get('/homeslider/create','SliderController@create');
+Route::get('/homeslider','SliderController@index');
+Route::delete('/homeslider/{id}','SliderController@destroy');
+Route::post('/homeslider','SliderController@store');
 Route::get('/download','DownloadController@display')->name('display');
 Route::get('/download/{filename}','DownloadController@download')->name('download');
 Route::get('/property_inquiries','PropertyController@inqex');
